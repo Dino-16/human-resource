@@ -1,4 +1,5 @@
 <div>
+    {{-- Hero Section --}}
     <div @class('d-flex align-items-center justify-content-center flex-column p-3 vh-100')>
         <h1 @class('display-1 text-center fw-semibold text-primary  fade-section')>Get in Touch with  us for more information and updates</h1>
         <div @class('w-50 text-center')>
@@ -6,7 +7,10 @@
             <a @class('btn btn-primary btn-lg fade-section') href="#contactUs">Contact Us</a>
         </div>
     </div>
+   {{-- Feature --}}
     <div @class('row')>
+
+        {{-- Feature icon-1 --}}
         <div @class('col-md-3')>
             <div @class('d-flex align-items-center justify-content-center flex-column')>
                 <div @class('bg-primary-subtle rounded-circle p-4 mb-3')>
@@ -19,6 +23,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- Feature 2 --}}
         <div @class('col-md-3')>
             <div @class('d-flex align-items-center justify-content-center flex-column')>
                 <div @class('bg-primary-subtle rounded-circle p-4 mb-3')>
@@ -31,6 +37,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- Feature 3--}}
         <div @class('col-md-3')>
             <div @class('d-flex align-items-center justify-content-center flex-column') >
                 <div @class('bg-primary-subtle rounded-circle p-4 mb-3')>
@@ -43,6 +51,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- Feature 4 --}}
         <div @class('col-md-3')>
             <div @class('d-flex align-items-center justify-content-center flex-column')>
                 <div @class('bg-primary-subtle rounded-circle p-4 mb-3')>
@@ -55,6 +65,8 @@
             </div>
         </div>
     </div>
+
+    {{-- Cotact Form--}}
     <div @class('row  p-5') id="contactUs">
         <div @class('col-md-6 p-5')>
             <h2 @class('text-primary mb-3')>Contact Us</h2>
