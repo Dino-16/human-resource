@@ -1,9 +1,12 @@
 <div>
+    {{-- Hero Section --}}
     <div @class('d-flex justify-content-center align-items-center vh-100 flex-column bg-primary-subtle fade-section')>
         <h1 @class('text-center display-1 fw-bold text-white')><span @class('fw-bold text-primary')>WELCOME</span> to Jetlouge</h1>
         <h1 @class('text-center display-1 fw-bold text-white mb-5')>Travel and Tours!</h1>
         <a @class('btn btn-primary btn-lg') href="#">GET STARTED</a>
     </div>
+
+    {{-- Intro Section --}}
     <div @class('bg-tertiary p-5 mx-5')>
         <h1 @class('my-5 display-3 text-primary fw-bold')>Jetlouge Travel and Tour Company</h1>
         <p @class('fs-4')>
@@ -16,14 +19,18 @@
             organizations build strong teams while guiding professionals toward meaningful careers.
         </p>
     </div>
+
+    {{--  MISSION VISION --}}
     <div @class('container bg-white my-5')>
         <div @class('row justify-content-center align-items-stretch gap-5')>
+            {{-- MISSION --}}
             <div @class('col-12 col-md-6 col-lg-4 bg-secondary text-white p-5 rounded')>
                 <h1 @class('text-center mb-5')>Company's Mission</h1>
                 <p @class('mb-5 fs-5')>-To simplify and modernize the recruitment process through technology.</p>
                 <p @class('mb-5 fs-5')>-To provide equal access to job opportunities for all applicants.</p>
                 <p @class('mb-5 fs-5')>-To support employers in finding the right candidates efficiently.</p>
             </div>
+            {{-- VISION --}}
             <div @class('col-12 col-md-6 col-lg-4 bg-secondary text-white p-5 rounded')>
                 <h1 @class('text-center mb-5')>Company's Vision</h1>
                 <p @class('text-white fs-5')>
@@ -34,12 +41,15 @@
             </div>
         </div>
     </div>
+
+    {{-- Features Section --}}
     <div @class('p-5')>
         <div @class('p-5')>
             <h1 @class('text-center text-primary display-3 fw-bold mb-5')>Jetlouge Travel and Tours Core Values</h1>
         </div>
         <div @class('p-5 mt-5')>
               <div class="d-flex align-items-center justify-content-around gap-3">
+                {{-- SHAPE1 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -53,6 +63,7 @@
                         </div>
                     </div>
                 </div>
+                {{--SHAPE2--}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -66,6 +77,7 @@
                         </div>
                     </div>
                 </div>
+                {{-- SHAPE 3 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -79,6 +91,7 @@
                         </div>
                     </div>
                 </div>
+                {{-- SHAPE 4 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -92,6 +105,7 @@
                         </div>
                     </div>
                 </div>
+                 {{-- SHAPE 5 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
