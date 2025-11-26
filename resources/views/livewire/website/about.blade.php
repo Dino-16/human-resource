@@ -1,6 +1,6 @@
 <div>
     {{-- Hero Section --}}
-    <div @class('d-flex align-items-center justify-content-center flex-column p-3 vh-100') 
+    <div @class('d-flex align-items-center justify-content-center flex-column p-3 vh-100')
      style="background: url('{{ asset('images/img-7.jpg') }}') no-repeat center center/cover;">
         <h1 @class('display-1 text-center fw-semibold text-primary fade-section')>About Us</h1>
         <div @class('w-50 text-center')>
@@ -37,5 +37,4 @@
             <p>Travel isn't just about getting from one place to another, it's about the moments you'll remember forever. At Jetlouge Travels, we're driven by a love for exploration, culture, and connection. Every trip we plan is crafted with care, ensuring you don't just see a destination, you trully experience it.</p>
         </div>
     </div>
-
 </div>

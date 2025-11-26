@@ -82,51 +82,48 @@
 
                 {{-- Shape 3 --}}
                 <div @class('d-flex align-items-center justify-content-center flex-column')>
-                    <div class="d-flex align-items-center justify-content-center flex-column">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
+                    <div @class('d-flex align-items-center justify-content-center flex-column')>
+                        <div @class('bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute')
                             style="width: 200px; height: 200px;">
-                            <p class="text-white text-center p-3">Innovation in Travel</p>
+                            <p @class('text-white text-center p-3')>Innovation in Travel</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center border mt-3 p-5  rounded">
-                        <div class="mt-5">
+                    <div @class('d-flex align-items-center justify-content-center border mt-3 p-5 rounded')>
+                        <div @class('mt-5')>
                             We embrace technology and fresh ideas to create smarter, more efficient, and exciting ways to explore the world.
                         </div>
                     </div>
                 </div>
 
                 {{-- Shape 4 --}}
-                <div class="d-flex align-items-center justify-content-center flex-column">
-                    <div class="d-flex align-items-center justify-content-center flex-column">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
+                <div @class('d-flex align-items-center justify-content-center flex-column')>
+                    <div @class('d-flex align-items-center justify-content-center flex-column')>
+                        <div @class('bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute')
                             style="width: 200px; height: 200px;">
-                            <p class="text-white text-center p-3">Integrity and Transparency</p>
+                            <p @class('text-white text-center p-3')>Integrity and Transparency</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center border mt-3 p-5  rounded">
-                        <div class="mt-5">
+                    <div @class('d-flex align-items-center justify-content-center border mt-3 p-5 rounded')>
+                        <div @class('mt-5')>
                             We conduct business with honesty, fairness, and openness, building lasting trust with our clients and partners.
                         </div>
                     </div>
                 </div>
 
-                 {{-- Shape 5 --}}
-                <div class="d-flex align-items-center justify-content-center flex-column">
-                    <div class="d-flex align-items-center justify-content-center flex-column">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
+                {{-- Shape 5 --}}
+                <div @class('d-flex align-items-center justify-content-center flex-column')>
+                    <div @class('d-flex align-items-center justify-content-center flex-column')>
+                        <div @class('bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute')
                             style="width: 200px; height: 200px;">
-                            <p class="text-white text-center p-3">Passion for Exploration   </p>
+                            <p @class('text-white text-center p-3')>Passion for Exploration</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center border mt-3 p-5  rounded">
-                        <div class="mt-5">
-                            We believe travel is more than reaching destinations—its about discovery, growth, and creating meaningful memories.
+                    <div @class('d-flex align-items-center justify-content-center border mt-3 p-5 rounded')>
+                        <div @class('mt-5')>
+                            We believe travel is more than reaching destinations its about discovery, growth, and creating meaningful memories.
                         </div>
                     </div>
                 </div>
-                </div>
-            </div>
         </div>
     </div>
-
 </div>
