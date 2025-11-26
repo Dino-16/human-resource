@@ -1,10 +1,23 @@
 <div>
     {{-- Hero Section --}}
-    <div @class('d-flex align-items-center justify-content-center flex-column bg-primary-subtle p-3 vh-100  fade-section')>
-        <h1 @class('display-1 text-center fw-semibold text-primary')>Welcome To Jetlouge Travels</h1>
-        <h3 @class('display-6 text-center pb-5')>Where careers grow and teams thrive.</h3>
-        <p @class('h5 text-center fw-medium pb-3')>Finding the right job or the perfect hire shouldn't be stressful or complicated. That's why we've created a space where talented people  can connect with ease.</p>
-        <a @class('btn btn-primary btn-lg') href="{{ route('careers') }}">View Careers</a>
+    <div class="hero-section position-relative vh-100 d-flex align-items-center justify-content-center flex-column fade-section">
+
+        {{-- Background Video --}}
+        <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+            <source src="{{ asset('videos/hero-bg.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        {{-- Overlay (content stays above video) --}}
+        <div class="position-relative text-center text-white z-2 p-3">
+            <h1 class="display-1 fw-semibold">Welcome To Jetlouge Travels</h1>
+            <h3 class="display-6 pb-5">Where careers grow and teams thrive.</h3>
+            <p class="h5 fw-medium pb-3">Finding the right job or the perfect hire shouldn't be stressful or complicated. That's why we've created a space where talented people can connect with ease.</p>
+            <a class="btn btn-primary btn-lg" href="{{ route('careers') }}">View Careers</a>
+        </div>
+
+        {{-- Optional overlay for darkening video --}}
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
     </div>
 
     {{-- Intro Section --}}

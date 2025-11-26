@@ -1,4 +1,8 @@
 <div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> acaa9f7748b8675f5f8abe449d26868c0f58cec2
     {{-- Hero Section --}}
     <div @class('d-flex justify-content-center align-items-center vh-100 flex-column bg-primary-subtle fade-section')>
         <h1 @class('text-center display-1 fw-bold text-white')><span @class('fw-bold text-primary')>WELCOME</span> to Jetlouge</h1>
