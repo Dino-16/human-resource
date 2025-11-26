@@ -1,9 +1,13 @@
 <div>
+
+    {{-- Hero Section --}}
     <div @class('d-flex justify-content-center align-items-center vh-100 flex-column bg-primary-subtle fade-section')>
         <h1 @class('text-center display-1 fw-bold text-white')><span @class('fw-bold text-primary')>WELCOME</span> to Jetlouge</h1>
         <h1 @class('text-center display-1 fw-bold text-white mb-5')>Travel and Tours!</h1>
         <a @class('btn btn-primary btn-lg') href="#">GET STARTED</a>
     </div>
+
+    {{-- Intro Section --}}
     <div @class('bg-tertiary p-5 mx-5')>
         <h1 @class('my-5 display-3 text-primary fw-bold')>Jetlouge Travel and Tour Company</h1>
         <p @class('fs-4')>
