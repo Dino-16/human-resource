@@ -1,7 +1,8 @@
 <div>
     {{-- Hero Section --}}
-    <div @class('d-flex justify-content-center align-items-center vh-100 flex-column bg-primary-subtle fade-section')>
-        <h1 @class('text-center display-1 fw-bold text-white')><span @class('fw-bold text-primary')>Welcome</span> to Jetlouge</h1>
+    <div @class('d-flex justify-content-center align-items-center vh-100 flex-column bg-primary-subtle fade-section')
+    style="background: url({{ asset('images/company.jpg') }}) no-repeat center center / cover ;">
+        <h1 @class('text-center display-1 fw-bold text-white')><span @class('fw-bold text-white')>Welcome</span> to Jetlouge</h1>
         <h1 @class('text-center display-1 fw-bold text-white mb-5')>Travel and Tours!</h1>
         <a @class('btn btn-primary btn-lg') href="#">GET STARTED</a>
     </div>
@@ -50,37 +51,37 @@
         <div @class('p-5 mt-5')>
               <div class="d-flex align-items-center justify-content-around gap-3">
                 {{-- Shape 1 --}}
-                <div class="d-flex align-items-center justify-content-center flex-column">
-                    <div class="d-flex align-items-center justify-content-center flex-column">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
+                <div @class('d-flex align-items-center justify-content-center flex-column')>
+                    <div >@class('d-flex align-items-center justify-content-center flex-column')
+                        <div @class('bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute')
                             style="width: 200px; height: 200px;">
-                            <p class="text-white text-center p-3">Customer Centered Service</p>
+                            <p @class('text-white text-center p-3')>Customer Centered Service</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center border mt-3 p-5  rounded">
-                        <div class="mt-5">
-                            We put our travelers at the heart of everything we do, ensuring personalized experiences that meet their unique needs.
+                    <div @class('d-flex align-items-center justify-content-center border mt-3 p-5  rounded')>
+                        <div @class('mt-5')>
+                            We put ur travelers at the heart of everything we do, ensuring personalized experiences that meet their unique needs.
                         </div>
                     </div>
                 </div>
 
                 {{-- Shape 2--}}
-                <div class="d-flex align-items-center justify-content-center flex-column">
-                    <div class="d-flex align-items-center justify-content-center flex-column">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
+                <div @class('d-flex align-items-center justify-content-center flex-column')>
+                    <div @class('d-flex align-items-center justify-content-center flex-column')>
+                        <div @class('bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute')
                             style="width: 200px; height: 200px;">
-                            <p class="text-white text-center p-3">Excellence and Reliability</p>
+                            <p @class('text-white text-center p-3')>Excellence and Reliability</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-center border mt-3 p-5  rounded">
-                        <div class="mt-5">
+                    <div @class('d-flex align-items-center justify-content-center border mt-3 p-5  rounded')>
+                        <div @class('mt-5')>
                            We uphold the highest standards of service, delivering trustworthy, seamless, and hassle-free travel experiences.
                         </div>
                     </div>
                 </div>
 
                 {{-- Shape 3 --}}
-                <div class="d-flex align-items-center justify-content-center flex-column">
+                <div @class('d-flex align-items-center justify-content-center flex-column')>
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
                             style="width: 200px; height: 200px;">

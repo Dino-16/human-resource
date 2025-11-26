@@ -2,9 +2,9 @@
 
     {{-- Hero Section --}}
     <div @class('d-flex align-items-center justify-content-center flex-column p-3 vh-100')
-    style="backrground-image: url({{ asset('images/contact.jpg') }}) no-repeat center center/cover ;">
-        <h1 @class('display-1 text-center fw-semibold text-primary  fade-section')>Get in Touch with  us for more information and updates</h1>
-        <div @class('w-50 text-center')>
+    style="background: url({{ asset('images/contact.jpg') }}) no-repeat center center / cover ;">
+        <h1 @class('display-1 text-center fw-semibold text-white  fade-section')>Get in Touch with  us for more information and updates</h1>
+        <div @class('w-50 text-center text-white')>
             <h3 @class('display-6 pb-5 fade-section')>should you have any questions? we're happy to serve you</h3>
             <a @class('btn btn-primary btn-lg fade-section') href="#contactUs">Contact Us</a>
         </div>
