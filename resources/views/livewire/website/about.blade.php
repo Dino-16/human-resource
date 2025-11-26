@@ -1,9 +1,10 @@
 <div>
     {{-- Hero Section --}}
-    <div @class('d-flex align-items-center justify-content-center flex-column p-3 vh-100')>
+    <div @class('d-flex align-items-center justify-content-center flex-column p-3 vh-100') 
+     style="background: url('{{ asset('images/img-7.jpg') }}') no-repeat center center/cover;">
         <h1 @class('display-1 text-center fw-semibold text-primary fade-section')>About Us</h1>
         <div @class('w-50 text-center')>
-            <h3 @class('display-6  pb-5 fade-section')>At Jetlouge Travels, we believe a career is more than a job, it's a journey. And every journey deserves the right direction.</h3>
+            <h3 @class('display-6  pb-5 text-white fade-section')>At Jetlouge Travels, we believe a career is more than a job, it's a journey. And every journey deserves the right direction.</h3>
             <a @class('btn btn-primary btn-lg fade-section') href="#learnMore">Learn More</a>
         </div>
     </div>
