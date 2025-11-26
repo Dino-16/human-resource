@@ -18,6 +18,7 @@
     @livewireScripts
 </head>
 <body @class('m-0 p-0')>
+    {{-- Header --}}
     <header @class('sticky-top')>
         <nav @class('navbar navbar-expand-lg bg-primary-subtle p-1')>
             <div @class('container')>
@@ -62,6 +63,8 @@
             </div>
         </nav>
     </header>
+
+    {{-- Main --}}
     <main>
         @yield('content')
     </main>
@@ -73,7 +76,7 @@
     'fade-section' => !request()->routeIs('application') ])>
         <div class="container">
             <div class="row">
-            {{-- PRODUCT Column --}}
+            {{-- Product Column --}}
             <div @class('col-md-3')>
                 <h5 @class('text-uppercase mb-4')>Product</h5>
                 <ul @class('list-unstyled')>
@@ -84,7 +87,7 @@
                 </ul>
             </div>
 
-            {{-- RESOURCES Column --}}
+            {{-- Resources Column --}}
             <div @class('col-md-3')>
                 <h5 @class('text-uppercase mb-4')>Resources</h5>
                 <ul @class('list-unstyled')>
@@ -95,7 +98,7 @@
                 </ul>
             </div>
 
-            {{-- COMPANY Column --}}
+            {{-- Company Column --}}
             <div @class('col-md-3')>
                 <h5 @class('text-uppercase mb-4')>Company</h5>
                 <ul @class('list-unstyled')>
@@ -116,7 +119,7 @@
         </div>
     </footer>
 
-    {{-- animation --}}
+    {{-- Animation --}}
     @include('layouts.includes.animation')
 </body>
 </html>

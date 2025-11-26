@@ -1,10 +1,13 @@
 <div>
+    {{-- Hero Section --}}
     <div @class('d-flex align-items-center justify-content-center flex-column bg-primary-subtle p-3 vh-100  fade-section')>
         <h1 @class('display-1 text-center fw-semibold text-primary')>Welcome To Jetlouge Travels</h1>
         <h3 @class('display-6 text-center pb-5')>Where careers grow and teams thrive.</h3>
         <p @class('h5 text-center fw-medium pb-3')>Finding the right job or the perfect hire shouldn't be stressful or complicated. That's why we've created a space where talented people  can connect with ease.</p>
         <a @class('btn btn-primary btn-lg') href="{{ route('careers') }}">View Careers</a>
     </div>
+
+    {{-- Intro Section --}}
     <div @class('row bg-white p-3  fade-section')>
         <div @class('col-md-6 d-flex align-items-center justify-content-center')>
             <img src="{{ asset('images/img-1.png') }}" @class('img-fluid') alt="">
@@ -14,7 +17,10 @@
             <h3>If you're chasing your dream role, we'll help you get there. If you're building your dream team, we'll help you find the right match. With smart search tools, trusted listings, and personalized suggestions, we make it simpler than ever to bring the right people together.</h3>
         </div>
     </div>
+
+    {{-- Features Section --}}
     <div @class('row py-5 bg-body-tertiary d-flex align-items-center justify-content-center p-5  fade-section') style="height: 80vh">
+        {{-- Card 1 --}}
         <div @class('col-md-4')>
             <div @class('card p-3 shadow-sm')>
                 <div @class('d-flex flex-column justify-content-center align-items-center')>
@@ -24,6 +30,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- Card 2 --}}
         <div @class('col-md-4')>
             <div @class('card p-3 shadow-sm')>
                 <div @class('d-flex flex-column justify-content-center align-items-center')>
@@ -33,6 +41,8 @@
                 </div>
             </div>
         </div>
+
+        {{-- Card 3 --}}
         <div @class('col-md-4')>
             <div @class('card p-3 shadow-sm')>
                 <div @class('d-flex flex-column justify-content-center align-items-center')>
