@@ -1,11 +1,7 @@
 <div>
-<<<<<<< HEAD
-
-=======
->>>>>>> acaa9f7748b8675f5f8abe449d26868c0f58cec2
     {{-- Hero Section --}}
     <div @class('d-flex justify-content-center align-items-center vh-100 flex-column bg-primary-subtle fade-section')>
-        <h1 @class('text-center display-1 fw-bold text-white')><span @class('fw-bold text-primary')>WELCOME</span> to Jetlouge</h1>
+        <h1 @class('text-center display-1 fw-bold text-white')><span @class('fw-bold text-primary')>Welcome</span> to Jetlouge</h1>
         <h1 @class('text-center display-1 fw-bold text-white mb-5')>Travel and Tours!</h1>
         <a @class('btn btn-primary btn-lg') href="#">GET STARTED</a>
     </div>
@@ -53,7 +49,7 @@
         </div>
         <div @class('p-5 mt-5')>
               <div class="d-flex align-items-center justify-content-around gap-3">
-                {{-- SHAPE1 --}}
+                {{-- Shape 1 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -67,7 +63,8 @@
                         </div>
                     </div>
                 </div>
-                {{--SHAPE2--}}
+
+                {{-- Shape 2--}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -81,7 +78,8 @@
                         </div>
                     </div>
                 </div>
-                {{-- SHAPE 3 --}}
+
+                {{-- Shape 3 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -95,7 +93,8 @@
                         </div>
                     </div>
                 </div>
-                {{-- SHAPE 4 --}}
+
+                {{-- Shape 4 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"
@@ -109,7 +108,8 @@
                         </div>
                     </div>
                 </div>
-                 {{-- SHAPE 5 --}}
+
+                 {{-- Shape 5 --}}
                 <div class="d-flex align-items-center justify-content-center flex-column">
                     <div class="d-flex align-items-center justify-content-center flex-column">
                         <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center position-absolute"

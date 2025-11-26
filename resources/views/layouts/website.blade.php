@@ -72,8 +72,7 @@
     'bg-dark',
     'text-white',
     'pt-5',
-    'pb-4',
-    'fade-section' => !request()->routeIs('application') ])>
+    'pb-4'])>
         <div class="container">
             <div class="row">
             {{-- Product Column --}}
