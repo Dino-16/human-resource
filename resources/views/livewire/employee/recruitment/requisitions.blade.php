@@ -93,7 +93,7 @@
                             <button
                                 type="button"
                                 @class('btn btn-default border btn-sm')
-                                wire:click="viewRequisition()"
+                                wire:click="accept()"
                                 title="Accepted"
                             >
                                 <i @class('bi bi-check-lg')></i>
