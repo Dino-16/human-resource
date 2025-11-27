@@ -3,6 +3,7 @@
 
     {{-- Card --}}
     <div @class('mb-3')>
+        dsfsdfsd
     </div>
 
     <div @class('d-flex justify-content-between align-items-center')>
