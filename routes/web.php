@@ -22,7 +22,11 @@ Route::middleware(['auth'])->group( function() {
     // Employees routes
     Route::view('/dashboard', 'employee.dashboard')->name('dashboard');
     Route::view('/requisitions', 'employee.recruitment.requisitions')->name('requisitions');
+<<<<<<< HEAD
     Route::view('/job-postings', 'hr1.recruitment_management.job-postings')->name('job-postings');
+=======
+    Route::view('/job-posting', 'employee.recruitment.job-posting')->name('job-posting');
+>>>>>>> 121617bd969d99d4aaa259208544505cc7f3f5c1
 
 });
 
