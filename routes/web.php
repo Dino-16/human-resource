@@ -21,6 +21,9 @@ Route::middleware(['guest'])->group( function() {
 Route::middleware(['auth'])->group( function() {
     // Employee routes
     Route::view('/dashboard', 'employee.dashboard')->name('dashboard');
+    Route::view('/requisitions', 'hr1.recruitment_management.requisitions')->name('requisitions');
+    Route::view('/job-postings', 'hr1.recruitment_management.job-postings')->name('job-postings');
+
 });
 
 

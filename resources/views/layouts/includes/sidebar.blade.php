@@ -43,15 +43,10 @@
                             <i @class('bi bi-megaphone-fill me-2')></i> Job Posting
                         </a>
                     </li>
-                    <li @class('nav-item')>
-                        <a href="http://website.test" @class('nav-link text-dark')>
-                            <i @class('bi bi-globe2 me-2')></i> Website
-                        </a>
-                    </li>
                 </ul>
             </div>
         </li>
-
+        {{-- 
         <li @class('nav-item')>
             <a href="#applicantsMenu"
             role="button"
@@ -234,7 +229,7 @@
         <hr>
 
         <livewire:auth.logout />
-
+        --}}
     </ul>
-
+    
 </aside>
