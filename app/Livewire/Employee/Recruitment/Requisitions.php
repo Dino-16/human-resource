@@ -10,14 +10,14 @@ class Requisitions extends Component
     public function accept()
     {
         $requisition = Requisition::findOrFail($id);
-        $requisition->status = "Acceptad";
+        $requisition->status = "Accepted";
         $requisition->save();
     }
 
     public function render()
     {
         $requisition = Requisition::latest();
-
+s
         return view('livewire.employee.recruitment.requisitions', [
             'requisition' => $requisition,
         ]);

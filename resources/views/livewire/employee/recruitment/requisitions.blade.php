@@ -80,14 +80,12 @@
                 </tr>
             </thead>
             <tbody>
-                    <tr>
-                        <td @class('text-nowrap')></td>
-                        <td @class('text-truncate')></td>
-                        <td @class('text-capitalize')></td>
-                        <td @class('text-start')></td>
-                        <td>
-
-                        </td>
+                    @foreach ($requisitions as $requisition)
+                        <tr>
+                        <td @class('text-nowrap')>{{ $requisition->requested_by }}</td>
+                        <td @class('text-truncate')>{{ $requisition->department }}</td>
+                        <td @class('text-capitalize')>{{ $requisition->position}}</td>
+                        <td @class('text-start')>{{ $requisition->opening }}</td>
                         <td @class('text-nowrap')>
 
                             <button
@@ -112,6 +110,7 @@
                         <td colspan="7" @class('text-center text-muted')>No requisitions found.</td>
                     </tr>
 
+                    @endforeach
             </tbody>
         </table>
 
