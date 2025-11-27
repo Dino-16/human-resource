@@ -87,6 +87,7 @@
                         <td @class('text-truncate')>{{ $requisition->department }}</td>
                         <td @class('text-capitalize')>{{ $requisition->position}}</td>
                         <td @class('text-start')>{{ $requisition->opening }}</td>
+                        <td @class('text-start')>{{ $requisition->status }}</td>
                         {{--
                         <td @class('text-nowrap')>
                             <button
@@ -162,38 +163,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                            <tr>
-                                <td @class('text-nowrap')></td>
-                                <td @class('text-truncate')></td>
-                                <td @class('text-capitalize')></td>
-                                <td @class('text-start')></td>
-                                <td>
-
-                                </td>
-                                <td @class('text-nowrap')>
-
-                                    <button
-                                        type="button"
-                                        @class('btn btn-default border btn-sm')
-                                        wire:click="viewRequisition()"
-                                        title="Accepted"
-                                    >
-                                        <i @class('bi bi-check-lg')></i>
-                                    </button>
-                                    <button
-                                        type="button"
-                                        @class('btn btn-default border btn-sm')
-                                        wire:click="viewRequisition()"
-                                        title="Draft"
-                                    >
-                                        <i @class('bi bi-journal-text')></i>
-                                    </button>
-                            </tr>
-
+                        @forelse ($requisitions as $requisition)
+                            @if ($requisition->status === "Draft")
+                                <tr>
+                                    <td @class('text-nowrap')>{{ $requisition->requested_by }}</td>
+                                    <td @class('text-truncate')>{{ $requisition->department }}</td>
+                                    <td @class('text-capitalize')>{{ $requisition->position}}</td>
+                                    <td @class('text-capitalize')>{{ $requisition->opening }}</td>
+                                    <td @class('text-start')>{{ $requisition->status }}</td>
+                                </tr>
+                            @endif
+                            @empty
                             <tr>
                                 <td colspan="7" @class('text-center text-muted')>No requisitions found.</td>
                             </tr>
-
+                        @endforelse
                     </tbody>
                 </table>
 
