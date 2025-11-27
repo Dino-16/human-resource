@@ -38,8 +38,8 @@
                         </a>
                     </li>
                     <li @class('nav-item')>
-                        <a href="{{ route('job-postings') }}"
-                            @class('nav-link text-dark' . (request()->is('job-postings') ? 'active' : ''))>
+                        <a href="{{ route('job-posting') }}"
+                            @class('nav-link text-dark' . (request()->is('job-posting') ? 'active' : ''))>
                             <i @class('bi bi-megaphone-fill me-2')></i> Job Posting
                         </a>
                     </li>
