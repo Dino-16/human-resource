@@ -9,8 +9,8 @@
 <section>
     <div @class(['container-fluid'])>
 
-        @livewire('recruitment.requisitions')
-    
+        @livewire('employee.recruitment.requisitions')
+
     </div>
 </section>
 
