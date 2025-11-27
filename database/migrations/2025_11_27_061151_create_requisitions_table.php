@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('requisitions', function (Blueprint $table) {
             $table->id();
             $table->string('requested_by');
-            $table->string('department');     
+            $table->string('department');
             $table->string('position');
-            $table->integer('opening');      
-            $table->enum('status', ['Open', 'Accepted', 'Draft'])->default('Open'); 
+            $table->integer('opening');
+            $table->enum('status', ['Open', 'Accepted', 'Draft'])->default('Open');
             $table->timestamps();
         });
     }
