@@ -16,7 +16,7 @@ class Requisitions extends Component
 
     public function render()
     {
-        $requisitions = Requisition::latest();
+        $requisitions = Requisition::latest()->get();
 
         return view('livewire.employee.recruitment.requisitions', [
             'requisitions' => $requisitions,
