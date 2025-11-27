@@ -50,7 +50,7 @@
                 <div @class('d-flex flex-column justify-content-center align-items-center')>
                     <img src="{{ asset('images/img-3.png') }}" alt="">
                     <h3>Accelerated Growth</h3>
-                    <p @class('text-center w-50')>The tourism sectors drivesaccelerated growth byexpanding economicopportunities.</p>
+                    <p @class('text-center w-50')>The tourism sectors drives accelerated growth by  expanding economic opportunities.</p>
                 </div>
             </div>
         </div>
