@@ -81,14 +81,14 @@
                 </tr>
             </thead>
             <tbody>
-                    @foreach ($requisitions as $requisition)
+                    @foreach($requisitions as $requisition)
                         <tr>
                         <td @class('text-nowrap')>{{ $requisition->requested_by }}</td>
                         <td @class('text-truncate')>{{ $requisition->department }}</td>
                         <td @class('text-capitalize')>{{ $requisition->position}}</td>
                         <td @class('text-start')>{{ $requisition->opening }}</td>
+                        {{--
                         <td @class('text-nowrap')>
-
                             <button
                                 type="button"
                                 @class('btn btn-default border btn-sm')
@@ -105,6 +105,8 @@
                             >
                                 <i @class('bi bi-journal-text')></i>
                             </button>
+                        </td>
+                        --}}
                     </tr>
 
                     <tr>
