@@ -81,7 +81,7 @@
                 </tr>
             </thead>
             <tbody>
-                    @foreach($requisitions as $requisition)
+                    @forelse($requisitions as $requisition)
                         <tr>
                         <td @class('text-nowrap')>{{ $requisition->requested_by }}</td>
                         <td @class('text-truncate')>{{ $requisition->department }}</td>
@@ -108,12 +108,11 @@
                         </td>
                         --}}
                     </tr>
-
+                    @empty
                     <tr>
                         <td colspan="7" @class('text-center text-muted')>No requisitions found.</td>
                     </tr>
-
-                    @endforeach
+                    @endforelse
             </tbody>
         </table>
 
