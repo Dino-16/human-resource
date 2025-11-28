@@ -16,7 +16,7 @@
             </div>
             {{-- with check Bar --}}
             <div @class('mb-3 ')>
-                <button class="btn btn-primary">Wih check</button>
+                <button class="btn btn-primary" wire:click="enableSelection">SELECT</button>
             </div>
         </div>
 
@@ -38,8 +38,8 @@
                     </a>
                 </li>
                 <li>
-                    <a @class('dropdown-item') wire:click="$set('statusFilter', 'In-Progress')">
-                        <i @class('bi bi-hourglass-split me-2')></i> In-Progress
+                    <a @class('dropdown-item') wire:click="$set('statusFilter', 'Accepted')">
+                        <i @class('bi bi-hourglass-split me-2')></i> Accepted
                     </a>
                 </li>
                 <li>
@@ -47,15 +47,20 @@
                         <i @class('bi bi-journal-text me-2')></i> Draft
                     </a>
                 </li>
-                <li>
-                    <a @class('dropdown-item') wire:click="$set('statusFilter', 'Closed')">
-                        <i @class('bi bi-check-circle me-2')></i> Closed
-                    </a>
-                </li>
             </ul>
         </div>
 
     </div>
+
+    {{-- Action Buttons --}}
+    @if($selectMode)
+        <div class="mb-3 d-flex gap-2">
+            <button class="btn btn-primary" wire:click="selectAllRows">Select All</button>
+            <button class="btn btn-success" wire:click="acceptSelected" @disabled(empty($selected))>Accept Selected</button>
+            <button class="btn btn-warning" wire:click="draftSelected" @disabled(empty($selected))>Draft Selected</button>
+            <button class="btn btn-secondary" wire:click="disableSelection">Cancel</button>
+        </div>
+    @endif
 
     {{-- Table Title --}}
     <div @class('p-5 bg-white rounded border rounded-bottom-0 border-bottom-0')>
@@ -67,11 +72,19 @@
         </div>
     </div>
 
+
     {{-- Table --}}
     <div @class('table-responsive border rounded bg-white px-5 rounded-top-0 border-top-0')>
         <table @class('table')>
             <thead>
                 <tr @class('bg-dark')>
+
+                    @if($selectMode)
+                        <th>
+                            <input type="checkbox" wire:model="selectAll">
+                        </th>
+                    @endif
+
                     <th @class('text-secondary fw-normal') scope="col">Requested by</th>
                     <th @class('text-secondary fw-normal') scope="col">Requisition</th>
                     <th @class('text-secondary fw-normal') scope="col">Department</th>
@@ -83,31 +96,29 @@
             <tbody>
                     @forelse($requisitions as $requisition)
                         <tr>
+
+                        {{-- Checkbox row --}}
+                        @if($selectMode)
+                            <td>
+                                <input type="checkbox" value="{{ $requisition->id }}" wire:model="selected">
+                            </td>
+                        @endif
+
                         <td @class('text-nowrap')>{{ $requisition->requested_by }}</td>
                         <td @class('text-truncate')>{{ $requisition->department }}</td>
                         <td @class('text-capitalize')>{{ $requisition->position}}</td>
                         <td @class('text-start')>{{ $requisition->opening }}</td>
                         <td @class('text-start')>{{ $requisition->status }}</td>
-                        {{--
-                        <td @class('text-nowrap')>
-                            <button
-                                type="button"
-                                @class('btn btn-default border btn-sm')
-                                wire:click="accept()"
-                                title="Accepted"
-                            >
-                                <i @class('bi bi-check-lg')></i>
+
+                       <td class="text-nowrap">
+                            <button type="button" class="btn btn-default border btn-sm" wire:click="accept({{ $requisition->id }})" title="Accept">
+                                <i class="bi bi-check-lg"></i>
                             </button>
-                            <button
-                                type="button"
-                                @class('btn btn-default border btn-sm')
-                                wire:click="viewRequisition()"
-                                title="Draft"
-                            >
-                                <i @class('bi bi-journal-text')></i>
+                            <button type="button" class="btn btn-default border btn-sm" wire:click="draft({{ $requisition->id }})" title="Draft">
+                                <i class="bi bi-journal-text"></i>
                             </button>
                         </td>
-                        --}}
+
                     </tr>
                     @empty
                     <tr>
@@ -132,10 +143,6 @@
             {{-- Search Bar --}}
             <div @class('mb-3 mx-3')>
                 <x-text-input type="search" wire:model.live.debounce.3s="search" placeholder="Search..." />
-            </div>
-            {{-- with check Bar --}}
-            <div @class('mb-3 ')>
-                <button class="btn btn-primary">Wih check</button>
             </div>
         </div>
 
