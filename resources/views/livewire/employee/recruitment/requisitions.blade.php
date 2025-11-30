@@ -83,32 +83,30 @@
             <tbody>
                     @forelse($requisitions as $requisition)
                         <tr>
-                        <td @class('text-nowrap')>{{ $requisition->requested_by }}</td>
-                        <td @class('text-truncate')>{{ $requisition->department }}</td>
-                        <td @class('text-capitalize')>{{ $requisition->position}}</td>
-                        <td @class('text-start')>{{ $requisition->opening }}</td>
-                        <td @class('text-start')>{{ $requisition->status }}</td>
-                        {{--
-                        <td @class('text-nowrap')>
-                            <button
-                                type="button"
-                                @class('btn btn-default border btn-sm')
-                                wire:click="accept()"
-                                title="Accepted"
-                            >
-                                <i @class('bi bi-check-lg')></i>
-                            </button>
-                            <button
-                                type="button"
-                                @class('btn btn-default border btn-sm')
-                                wire:click="viewRequisition()"
-                                title="Draft"
-                            >
-                                <i @class('bi bi-journal-text')></i>
-                            </button>
-                        </td>
-                        --}}
-                    </tr>
+                            <td @class('text-nowrap')>{{ $requisition->requested_by }}</td>
+                            <td @class('text-truncate')>{{ $requisition->department }}</td>
+                            <td @class('text-capitalize')>{{ $requisition->position}}</td>
+                            <td @class('text-start')>{{ $requisition->opening }}</td>
+                            <td @class('text-start')>{{ $requisition->status }}</td>
+                            <td @class('text-nowrap')>
+                                <button
+                                    type="button"
+                                    @class('btn btn-default border btn-sm')
+                                    wire:click="accept({{$requisition->id}})"
+                                    title="Accepted"
+                                >
+                                    <i @class('bi bi-check-lg')></i>
+                                </button>
+                                <button
+                                    type="button"
+                                    @class('btn btn-default border btn-sm')
+                                    wire:click="draft({{$requisition->id}})"
+                                    title="Draft"
+                                >
+                                    <i @class('bi bi-journal-text')></i>
+                                </button>
+                            </td>
+                        </tr>
                     @empty
                     <tr>
                         <td colspan="7" @class('text-center text-muted')>No requisitions found.</td>
@@ -125,26 +123,14 @@
     </div>
 
     {{-- draft table --}}
-    <div @class('pt-2')>
-
-         {{-- left side --}}
-        <div @class('mb-3 d-flex justify-content-between align-items-center')>
-            {{-- Search Bar --}}
-            <div @class('mb-3 mx-3')>
-                <x-text-input type="search" wire:model.live.debounce.3s="search" placeholder="Search..." />
-            </div>
-            {{-- with check Bar --}}
-            <div @class('mb-3 ')>
-                <button class="btn btn-primary">Wih check</button>
-            </div>
-        </div>
+    <div @class('pt-5')>
 
          {{-- Table Title --}}
             <div @class('p-5 bg-white rounded border rounded-bottom-0 border-bottom-0')>
                 <div>
                     <h3>All Drafts</h3>
                     <p @class('text-secondary mb-0')>
-                        Overview of open, draft, closed requisitions
+                        Overview of drafted requisition
                     </p>
                 </div>
             </div>
