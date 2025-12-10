@@ -21,21 +21,23 @@
                 @class('col-md-12')
                 @endif>
                 <div @class('row g-4')>
-                    @foreach($jobs as $index => $job)
+                    @forelse($jobs as $job)
                         <div @class('col col-lg-4')>
                             <div @class('card shadow-sm h-100')>
                                 <div @class('card-body d-flex flex-column')>
-                                    <h4 class="h5 mb-3">{{ $job['title'] }}</h4>
+                                    <h4 class="h5 mb-3">{{ $job->position }}</h4>
                                     <div @class('mb-3')>
-                                        <span @class('badge bg-success me-1 mb-1')>{{ $job['type'] }}</span>
-                                        <span @class('badge bg-primary')>{{ $job['location'] }}</span>
+                                        <span @class('badge bg-success me-1 mb-1')>{{ $job->type }}</span>
+                                        <span @class('badge bg-primary')>{{ $job->arrangement }}</span>
                                     </div>
-                                    <p @class('mb-auto')>{{ $job['description'] }}</p>
+                                    <p @class('mb-auto')>{{ $job->description }}</p>
                                     <button wire:click="viewDetails" @class('btn btn-primary mt-3')>View Details <i class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <h3 @class('text-center')>No Available Jobs</h3>
+                    @endforelse
                 </div>
             </div>
 
@@ -45,34 +47,23 @@
                     <div @class('card shadow-sm h-100')>
                         <div @class('card-body')>
                             <div @class('d-flex justify-content-between align-items-center')>
-                                <h4 class="h5 mb-3">{{ $jobs[0]['title'] }}</h4>
+                                <h4 class="h5 mb-3">{{ $jobs->title }}</h4>
                                 <span wire:click="remove"><i class="bi bi-x-circle-fill"></i></span>
                             </div>
                             <div @class('mb-3')>
-                                <span @class('badge bg-success me-1 mb-1')>{{ $jobs[0]['type'] }}</span>
-                                <span @class('badge bg-primary')>{{ $jobs[0]['location'] }}</span>
+                                <span @class('badge bg-success me-1 mb-1')>{{ $jobs->type }}</span>
+                                <span @class('badge bg-primary')>{{ $jobs->arrangement }}</span>
                             </div>
 
                             <div @class('mb-4')>
                                 <h5>Job Description</h5>
-                                <p>{{ $jobs[0]['full_description'] }}</p>
+                                <p>{{ $jobs->description }}</p>
                             </div>
 
                             <div @class('mb-4')>
                                 <h5>Job Qualifications</h5>
                                 <ul class="list-unstyled">
-                                    @foreach($jobs[0]['qualifications'] as $qualification)
-                                        <li class="mb-2">{{ $qualification }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h5>Job Responsibilities</h5>
-                                <ul class="list-unstyled">
-                                    @foreach($jobs[0]['responsibilities'] as $responsibility)
-                                        <li class="mb-2">{{ $responsibility }}</li>
-                                    @endforeach
+                                    <li class="mb-2">{{ $job->qualification }}</li>
                                 </ul>
                             </div>
 
