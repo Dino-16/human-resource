@@ -30,6 +30,14 @@ return [
 
     'disks' => [
 
+        'resumes' => [
+            'driver' => 'local',
+            'root' => storage_path('app/resumes'),
+            'url' => env('APP_URL') . '/storage/resumes',
+            'visibility' => 'public',
+        ],
+
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/private'),

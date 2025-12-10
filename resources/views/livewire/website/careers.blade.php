@@ -31,7 +31,7 @@
                                         <span @class('badge bg-primary')>{{ $job->arrangement }}</span>
                                     </div>
                                     <p @class('mb-auto')>{{ $job->description }}</p>
-                                    <button wire:click="viewDetails" @class('btn btn-primary mt-3')>View Details <i class="bi bi-arrow-right"></i></button>
+                                    <button wire:click="viewDetails({{ $job->id }})" @class('btn btn-primary mt-3')>View Details <i class="bi bi-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -42,33 +42,34 @@
             </div>
 
             <!-- Job Details Column -->
-            @if($showDetails)
-                <div @class('col-md-6')>
-                    <div @class('card shadow-sm h-100')>
-                        <div @class('card-body')>
-                            <div @class('d-flex justify-content-between align-items-center')>
-                                <h4 class="h5 mb-3">{{ $jobs->title }}</h4>
+            @if($showDetails && $selectedJob)
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="h5 mb-3">{{ $selectedJob->position }}</h4>
                                 <span wire:click="remove"><i class="bi bi-x-circle-fill"></i></span>
                             </div>
-                            <div @class('mb-3')>
-                                <span @class('badge bg-success me-1 mb-1')>{{ $jobs->type }}</span>
-                                <span @class('badge bg-primary')>{{ $jobs->arrangement }}</span>
+
+                            <div class="mb-3">
+                                <span class="badge bg-success me-1 mb-1">{{ $selectedJob->type }}</span>
+                                <span class="badge bg-primary">{{ $selectedJob->arrangement }}</span>
                             </div>
 
-                            <div @class('mb-4')>
+                            <div class="mb-4">
                                 <h5>Job Description</h5>
-                                <p>{{ $jobs->description }}</p>
+                                <p>{{ $selectedJob->description }}</p>
                             </div>
 
-                            <div @class('mb-4')>
+                            <div class="mb-4">
                                 <h5>Job Qualifications</h5>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2">{{ $job->qualification }}</li>
+                                    <li class="mb-2">{{ $selectedJob->qualifications }}</li>
                                 </ul>
                             </div>
 
-                            <div @class('mb-4')>
-                                <a @class('btn btn-success') href="{{ route('application') }}">Apply Now</a>
+                            <div class="mb-4">
+                                <a class="btn btn-success" href="{{ route('application', ['id' => $selectedJob->id]) }}">Apply Now</a>
                             </div>
                         </div>
                     </div>

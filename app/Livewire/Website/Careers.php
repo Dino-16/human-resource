@@ -7,16 +7,18 @@ use App\Models\Recruitment\JobListing;
 class Careers extends Component
 {
     public $showDetails = false;
+    public $selectedJob;
 
-    public function viewDetails()
+    public function viewDetails($id)
     {
-        $this->showDetails = !$this->showDetails;
-        $this->dispatch('detailsToggled');
+        $this->selectedJob = JobListing::find($id);
+        $this->showDetails = true;
     }
 
     public function remove()
     {
         $this->showDetails = false;
+        $this->selectedJob = null;
     }
 
     public function render()
@@ -28,7 +30,8 @@ class Careers extends Component
 
         return view('livewire.website.careers', [
             'jobs' => $jobs,
+            'selectedJob' => $this->selectedJob,
             'showDetails' => $this->showDetails
-        ])->layout('layouts.website');
+        ]);
     }
 }
