@@ -8,7 +8,8 @@ Route::middleware(['guest'])->group( function() {
     Route::view('/about', 'website.about')->name('about');
     Route::view('/contacts', 'website.contacts')->name('contacts');
     Route::view('/careers', 'website.careers')->name('careers');
-    Route::view('/application', 'website.application')->name('application');
+    Route::get('/application/{id}', function ($id) {
+        return view('website.application', compact('id'));})->name('application');
     Route::view('/company', 'website.company')->name('company');
 
     //Auth routes
