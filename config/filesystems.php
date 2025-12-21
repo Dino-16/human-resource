@@ -32,11 +32,10 @@ return [
 
         'resumes' => [
             'driver' => 'local',
-            'root' => storage_path('app/resumes'),
-            'url' => env('APP_URL') . '/storage/resumes',
+            'root' => storage_path('app/public/resumes'),
+            'url' => env('APP_URL').'/storage/resumes',
             'visibility' => 'public',
         ],
-
 
         'local' => [
             'driver' => 'local',

@@ -48,6 +48,29 @@
         </li>
 
         <li @class('nav-item')>
+            <a href="#applicantsMenu"
+            role="button"
+            aria-expanded="{{ (request()->is('applications') || request()->is('filtered-resumes') || request()->is('candidates') || request()->is('interviews') || request()->is('request-rooms') || request()->is('offer-acceptance')) ? 'true' : 'false' }}"
+            aria-controls="applicantsMenu"
+            data-bs-toggle="collapse"
+            @class('nav-link text-dark d-flex justify-content-between align-items-center')>
+                <span><i @class('bi bi-people-fill me-2')></i> Applicants</span>
+                <i @class('bi bi-chevron-down small')></i>
+            </a>
+
+            <div id="applicantsMenu" @class('collapse ps-4 ' . ((request()->is('applications') || request()->is('filtered-resumes') || request()->is('candidates') || request()->is('interviews') || request()->is('request-rooms') || request()->is('offer-acceptance')) ? 'show' : ''))>
+                <ul @class('nav flex-column')>
+                    <li @class('nav-item')>
+                        <a href="{{ route('applications') }}"
+                            @class('nav-link text-dark' . (request()->is('applications') ? 'active' : ''))>
+                            <i @class('bi bi-journal-text me-2')></i> Applications
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li @class('nav-item')>
             <a href="#recognitionMenu"
             role="button"
             aria-expanded="{{ (request()->is('shout-outs') || request()->is('shoutout-records')) ? 'true' : 'false' }}"
@@ -70,8 +93,8 @@
             </div>
         </li>
 
-        {{--
-        <li @class('nav-item')>s
+            {{--
+        <li @class('nav-item')>
             <a href="#applicantsMenu"
             role="button"
             aria-expanded="{{ (request()->is('applications') || request()->is('filtered-resumes') || request()->is('candidates') || request()->is('interviews') || request()->is('request-rooms') || request()->is('offer-acceptance')) ? 'true' : 'false' }}"
@@ -90,6 +113,8 @@
                             <i @class('bi bi-journal-text me-2')></i> Applications
                         </a>
                     </li>
+
+                    
                     <li @class('nav-item')>
                         <a href="{{ route('filtered-resumes') }}"
                             @class('nav-link text-dark' . (request()->is('filtered-resumes') ? 'active' : ''))>
@@ -252,8 +277,9 @@
 
         <hr>
 
-        <livewire:auth.logout />
+        
         --}}
+        <livewire:auth.logout />
     </ul>
 
 </aside>

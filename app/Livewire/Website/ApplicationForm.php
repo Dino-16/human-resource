@@ -6,6 +6,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\Recruitment\Application;
 use App\Models\Recruitment\JobListing;
+use Illuminate\Support\Facades\Storage;
 
 class ApplicationForm extends Component
 {
@@ -44,7 +45,7 @@ class ApplicationForm extends Component
         ]);
 
         $applicantResumePath = $this->applicantResumeFile->store('', 'resumes');
-        $applicantResumeUrl = asset('storage/' . $applicantResumePath);
+        $applicantResumeUrl = Storage::disk('resumes')->url($applicantResumePath);
 
         Application::create([
             'applied_position'      => $this->job->position,

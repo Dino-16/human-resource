@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\OtpVerification;
+use App\Http\Controllers\ApplicationController;
 
 Route::middleware(['guest'])->group( function() {
     Route::view('/', 'website.home')->name('home');
@@ -24,7 +25,11 @@ Route::middleware(['auth'])->group( function() {
     Route::view('/dashboard', 'employee.dashboard')->name('dashboard');
     Route::view('/requisitions', 'employee.recruitment.requisitions')->name('requisitions');
     Route::view('/job-postings', 'employee.recruitment.job-posting')->name('job-posting');
+    Route::view('/applications', 'employee.applicants.applications')->name('applications');
     Route::view('/recognition', 'employee.socail.recognition')->name('recognition');
+    
+    // Resume viewing route
+    Route::get('/application/{id}/resume', [ApplicationController::class, 'viewResume'])->name('applications.resume');
 });
 
 

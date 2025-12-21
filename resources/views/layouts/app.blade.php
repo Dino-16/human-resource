@@ -12,6 +12,9 @@
     {{-- styles|scripts --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    {{-- Livewire styles --}}
+    @livewireStyles
+
 </head>
 <body style="background-color: #f8f9fa !important;">
 
@@ -58,5 +61,7 @@
     {{-- Trix Editor --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js"></script>
+    {{-- Livewire scripts --}}
+    @livewireScripts
 </body>
 </html>
